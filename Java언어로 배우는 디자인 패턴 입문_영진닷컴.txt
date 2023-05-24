@@ -19,6 +19,6 @@ GoF가 정의한 23개의 디자인 패턴을 Java언어로 다루어본다.
 
 ▷Iterator패턴
 -반복자, 루프변수와 같은 역할을 한다.
--Aggregate 인터페이스는 집합체를 나타낸다. like 배열
--클래스를 집합체로 다루기 위해 Aggregate 인터페이스를 구현시킨다.
+-Collection 인터페이스는 집합체를 나타낸다. like 배열
+-클래스를 집합체로 다루기 위해 Collection 인터페이스를 구현시킨다.
 -Iterator

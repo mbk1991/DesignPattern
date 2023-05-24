@@ -1,8 +1,8 @@
 package main.java.designpattern.iterator;
 
-public interface Iterator {
+public interface Iterator<E> {
 
     public abstract boolean hasNext();
-    public abstract Object next();
+    public abstract <E> E next();
 
 }

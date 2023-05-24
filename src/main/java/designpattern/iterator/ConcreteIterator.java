@@ -1,17 +1,17 @@
 package main.java.designpattern.iterator;
 
-public class ConcreteIterator implements Iterator {
-    private ConcreteAggregate concreteAggregate;
+public class ConcreteIterator<E> implements Iterator<E> {
+    private ConcreteAggregate ConcreteAggregate;
     private int index;
 
-    public ConcreteIterator(ConcreteAggregate concreteAggregate){
-        this.concreteAggregate = concreteAggregate;
+    public ConcreteIterator(ConcreteAggregate ConcreteAggregate){
+        this.ConcreteAggregate = ConcreteAggregate;
         this.index = 0;
     }
 
     @Override
     public boolean hasNext(){
-        if(index < concreteAggregate.getLength()){
+        if(index < ConcreteAggregate.getLength()){
             return true;
         }else{
             return false;
@@ -19,11 +19,9 @@ public class ConcreteIterator implements Iterator {
     }
 
     @Override
-    public Object next(){
-        Item item = concreteAggregate.getItemAt(index);
+    public  <E> E next(){
+        Item item = ConcreteAggregate.getItemAt(index);
         index++;
-        return item;
+        return (E)item;
     }
-
-
 }
