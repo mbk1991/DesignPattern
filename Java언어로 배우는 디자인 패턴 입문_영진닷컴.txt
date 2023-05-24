@@ -1,19 +1,24 @@
 -디자인패턴(Design Pattern)
 프로그램 개발 시 문제 해결을 위한 개발자들의 경험, 내적인 축적을
 디자인 패턴이라는 형태로 정의하고 이름을 붙였다.
-이를
-Erich Gamma, Richard Helm, Ralph Johnson, Jogn Vlissides
-4인의 개발자가(GoF, The Gang of Four)정리하여
-Elements of Reusable Object-Oriented Software 라는 책으로 발간하였다.
+이를 Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides
+4인의 개발자(GoF, The Gang of Four)가 
+정리하여
+Elements of Reusable Object-Oriented Software 
+라는 책으로 발간하였다.
 GoF가 정의한 23개의 디자인 패턴을 Java언어로 다루어본다.
 
 -디자인 패턴의 용어를 빌리면 보다 용이하게 서로의 아이디어를 비교, 논의할 수 있다.
 -매일 사용하는 프로그램을 새로운 시점에서 다시 생각하고, 재사용을 쉽게하고, 기능확장이
 쉬운 소프트웨어를 만들기 위한 유익한 기법이 디자인 패턴이다.
 
--UML(Unified Modeling Language)
--디자인 패턴에서 클래스 및 인스턴스의 관계 표현을 위해 UML을 사용한다.
--UML다이어그램 블로그 정리 글 첨부
+-디자인 패턴에서 클래스 및 인스턴스의 관계 표현을 위해 UML(Unified Modeling Language)을 사용한다.
 -클래스다이어그램에서 화살표의 방향. 화살표는 아는 것을 지목한다, 즉 자식이 부모를 가리킨다.
 -클래스다이어그램은 정적, 시퀀스다이어그램은 동적
--
+-다이어그램은 보는 것이 아니라 읽는 것이다.
+
+▷Iterator패턴
+-반복자, 루프변수와 같은 역할을 한다.
+-Aggregate 인터페이스는 집합체를 나타낸다. like 배열
+-클래스를 집합체로 다루기 위해 Aggregate 인터페이스를 구현시킨다.
+-Iterator
