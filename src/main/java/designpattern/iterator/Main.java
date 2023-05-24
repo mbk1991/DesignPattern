@@ -7,6 +7,8 @@ public class Main {
         ConcreteAggregate.appendItem(new Item("1번 아이템"));
         ConcreteAggregate.appendItem(new Item("2번 아이템"));
         ConcreteAggregate.appendItem(new Item("3번 아이템"));
+        ConcreteAggregate.appendItem(new Item("4번 아이템"));
+        ConcreteAggregate.appendItem(new Item("5번 아이템"));
 
         Iterator<Item> it = ConcreteAggregate.iterator();
 

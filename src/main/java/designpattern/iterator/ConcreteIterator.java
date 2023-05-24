@@ -20,8 +20,8 @@ public class ConcreteIterator<E> implements Iterator<E> {
 
     @Override
     public  <E> E next(){
-        Item item = ConcreteAggregate.getItemAt(index);
+        E e = (E) ConcreteAggregate.getItemAt(index);
         index++;
-        return (E)item;
+        return (E)e;
     }
 }
