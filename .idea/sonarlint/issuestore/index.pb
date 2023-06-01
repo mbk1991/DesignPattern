@@ -1,6 +1,4 @@
 
-_
-/src/main/java/designpattern/adapter/Client.java,a\9\a9891c6bd162688404a9a9494208bfe24ae0a1d3
 Z
 *src/main/java/designpattern/adapter/A.java,3\0\306218176e11dbb73e228154d157037f140c22b9
 `
