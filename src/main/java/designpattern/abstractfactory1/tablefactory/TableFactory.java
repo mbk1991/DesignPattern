@@ -7,7 +7,6 @@ public class TableFactory extends Factory {
     public Link createLink(String caption, String url) {
         return new TableLink(caption, url);
     }
-
     @Override
     public Tray createTray(String caption) {
         return new TableTray(caption);

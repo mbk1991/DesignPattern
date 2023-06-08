@@ -24,6 +24,7 @@ public abstract class Page {
             writer.write(this.makeHTML());
             writer.close();
             System.out.println(filename + " 을 작성하였습니다.");
+            System.out.println(this.makeHTML());
         } catch (IOException e) {
             e.printStackTrace();
         }
