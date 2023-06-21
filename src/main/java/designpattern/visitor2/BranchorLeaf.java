@@ -1,6 +1,6 @@
 package main.java.designpattern.visitor2;
 
-public abstract class BranchorLeaf {
+public abstract class BranchorLeaf implements Visitable{
     public abstract int getCountLeaf();
 
     public String getName(){

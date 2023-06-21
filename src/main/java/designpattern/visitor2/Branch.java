@@ -12,7 +12,6 @@ public class Branch extends BranchorLeaf {
     public Branch(String name){
         this.name = name;
     }
-
     @Override
     public int getCountLeaf() {
         int tmp = 0;
@@ -24,7 +23,6 @@ public class Branch extends BranchorLeaf {
         countLeaf = tmp;
         return countLeaf;
     }
-
     @Override
     public String getName() {
         return name;
@@ -34,5 +32,13 @@ public class Branch extends BranchorLeaf {
     public BranchorLeaf add(BranchorLeaf bol){
         childs.add(bol);
         return this;
+    }
+    @Override
+    public void accept(Visitor v) {
+        v.visitAndProcess(this);
+    }
+    //Visitor가 하위 노드에 접근할 수 있도록 iterator 반환 메소드 추가
+    public Iterator<BranchorLeaf> iterator(){
+        return childs.iterator();
     }
 }
