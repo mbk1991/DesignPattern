@@ -3,7 +3,7 @@ package main.java.designpattern.facade;
 import java.io.Writer;
 import java.io.IOException;
 
-public class HtmlWriter {
+class HtmlWriter {
     private Writer writer;
     public HtmlWriter(Writer writer){
         this.writer =writer;
