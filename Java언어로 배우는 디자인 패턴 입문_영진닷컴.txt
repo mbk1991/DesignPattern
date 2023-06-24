@@ -196,14 +196,6 @@ Iterator인터페이스의 hasNext()와 next()만 이용하지만
 - 알고리즘을 의식적으로 분리하고 알고리즘에 대한 인터페이스(API)를 규정한다.
 - 규정한 알고리즘 인터페이스를 위임하여 이용한다.
 - 위임이라는 느슨한 연결을 사용하여 알고리즘을 용이하게 교체할 수 있다.
-<<<<<<< HEAD
-- strategy 패턴에서 위임을 사용하여 런타임 중 전략을 
-
-
-
-교체할 수 있다.(동적인 교체) 
-- 위임하는 곳을 교환하는 패턴이다.
-=======
 - strategy 패턴에서 위임을 사용하여 런타임 중 전략을 교체할 수 있다.(동적인 교체) 
 - 전략을 위임하는 곳을 교환하는 패턴이다.
 
@@ -300,10 +292,25 @@ Iterator인터페이스의 hasNext()와 next()만 이용하지만
 -각각의 회원은 중개자를 가지고 있다.
 -중개자는 한 회원의 상태에 따라 다른 회원의 동작을 구현할 수 있다.
 
->>>>>>> 756995d56d6b3c5378ecfef6c8223f0db0e0aed6
+▷Observer패턴
+-Observer는 관찰자이다.
+-Publish/ Subscrib 패턴이라고도 한다.
+-관찰되는 대상을 Subject라고 칭한다.
+-Observer는 Subject의 동작 및 상태 변화를 관찰하고 동작을 수행한다.
+-하지만 사실은 Observer는 능동적으로 관찰하는 것이아니라 Subject에게 알림을 받는다.
+-Subject가  동작 및 상태 변화 시 본인이 가지고 있는 Observe에게 이를 알린다.
+-Observer는 Subject가 Observer를 update할 때(변화를 알릴 때) 동작한다.
+-Subject는 여러 Observer를 가지고 있을 수 있다.
+-'상태 변화를 알린다'는 점에서 Mediator패턴과 비슷하지만 Mediator는 여러 오브젝트들의 보고를 받아 해당 오브젝트들(Colleague)을 컨트롤하고, Observer는 Subject가 여러 Observer를 가지고 Observer들에게 상태변화를 알리면 각각의 Observer가 로직을 수행한다.
+-Subject는 본인이 사용할 Observer를 추가하고 삭제할 수 있다.
+-Subject는 현재의 상태를 취득하는 메소드를 가지고 있다.
+-Observer가Subject의 상태를 변화시킬 경우 메소드 호출이 반복될 수 있다. 이 경우 플래그 변수를 사용하는 것이 좋다.
+-Subject가 어느 정보까지 Observer에게 알릴 지는 프로그램의 복잡성을 고려해서 설계한다.
+-Observer패턴은 Subject의 변화를 Observer에게 알려서 상태를 동기화 하는 일에 주안점을 둔다.
+-Mediator패턴은 Colleague들의 변화를 가지고 Colleague들을 조정하는데 주안점을 준다.
 
 
-▷Composite 패턴
--Composite 패턴은 상자와 내용물을 동일시 하는 패턴이다.
--
+?자바의 클래스는 왜 다중 상속이 안되고
+인터페이스는 다중 상속이 될까????!
+
 
