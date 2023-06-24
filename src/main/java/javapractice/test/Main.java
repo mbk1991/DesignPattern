@@ -27,6 +27,27 @@ public class Main {
         System.out.println("CPU 정보:" );
         System.out.println("프로세서 수: " + osBean.getAvailableProcessors());
         System.out.println("시스템 부하: " + osBean.getSystemLoadAverage());
+        System.out.println();
+
+
+        long totalMemory;
+        long freeMemory;
+
+        System.out.println("GC요청 전");
+        totalMemory = Runtime.getRuntime().totalMemory();
+        freeMemory = Runtime.getRuntime().freeMemory();
+        System.out.println("totalMemory : " + totalMemory);
+        System.out.println("freeMemory : " + freeMemory);
+        System.out.println("used : " + (totalMemory - freeMemory));
+
+        System.out.println("GC요청");
+        Runtime.getRuntime().gc();
+        totalMemory = Runtime.getRuntime().totalMemory();
+        freeMemory = Runtime.getRuntime().freeMemory();
+        System.out.println("totalMemory : " + totalMemory);
+        System.out.println("freeMemory : " + freeMemory);
+        System.out.println("used : " + (totalMemory - freeMemory));
+
 
 
     }
