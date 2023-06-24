@@ -1,0 +1,5 @@
+mbk1991@naver.com=mb
+hjhj@naver.com=hjhj
+abcd1234@naver.com=jh
+khkh@gmail.com=khk
+lee@yahoo.co.kr=lee
